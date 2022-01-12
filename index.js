@@ -13,10 +13,6 @@ const app = express();
 
 app.use(routes);
 
-app.get('/', (req, res) => {
-  res.send('Hello World Getir2');
-});
-
 app.listen(PORT, () => {
   console.log(`Server listening on the port::${PORT}`);
 });
