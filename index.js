@@ -1,21 +1,15 @@
+require('dotenv').config()
+
 const express = require('express');
-const mongoose = require('mongoose');
-const routes = require('./routes');
+const mongoose = require('./config/mongo');
+const routes = require('./routes/routes');
+
 
 // Constants
 const PORT = process.env.PORT || 5000
 
 // App
 const app = express();
-
-mongoose.connect('mongodb+srv://challengeUser:WUMglwNBaydH8Yvu@challenge-xzwqd.mongodb.net/getir-case-study')
-.then(() => {
-    console.log('DB Connected')
-});
-
-mongoose.connection.on('error', (error) => {
-console.log('DB Error: ', error)
-});
 
 app.use(routes);
 
