@@ -1,7 +1,7 @@
 exports.validate = (req) => {
 
     //For now we only return a boolean. 
-    //When more time we should available return a specific validation error
+    //When more time we should return a specific validation error
     let isValid = true;
 
     if (!req.body.startDate || !req.body.endDate || !req.body.minCount || !req.body.maxCount) {

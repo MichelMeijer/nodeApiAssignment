@@ -4,8 +4,7 @@ const bodyParser = require('body-parser')
 const { success, error, validation } = require("../utils/responseApi");
 const { validate } = require("./../validators/requestValidator");
 
-
-// create application/json parser
+// create json parser
 const jsonParser = bodyParser.json()
 
 router.post('/', jsonParser, async (req, res, next) => {
@@ -22,7 +21,6 @@ router.post('/', jsonParser, async (req, res, next) => {
     }
 
 });
-
 
 
 module.exports = router;

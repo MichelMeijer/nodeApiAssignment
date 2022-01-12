@@ -4,7 +4,6 @@ const express = require('express');
 const mongoose = require('./config/mongo');
 const routes = require('./routes/routes');
 
-
 // Constants
 const PORT = process.env.PORT || 5000
 
